@@ -8,4 +8,4 @@
   que es un trabajo replicable. 
   
 
-En este proyecto de Rafael Irrizary trata sobre el efecto de los desastres que dejó el huracán María. En septiembre de 2017, el huracán María causó daños masivos en la infraestructura de Puerto Rico, pero su efecto sobre la mortalidad sigue siendo controvertido. Y de esto es lo que se va aestar viendo en este proyecto.
+Este proyecto de Rafael Irrizary trata sobre el efecto de los desastres que dejó el huracán María. En septiembre de 2017, el huracán María causó daños masivos en la infraestructura de Puerto Rico, pero su efecto sobre la mortalidad sigue siendo controvertido. Y de esto es lo que se va aestar viendo en este proyecto.
