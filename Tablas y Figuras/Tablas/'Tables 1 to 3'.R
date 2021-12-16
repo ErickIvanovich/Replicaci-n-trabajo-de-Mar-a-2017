@@ -11,7 +11,7 @@ weights <- readRDS("final_weights.RDS")
 #RDS data used for table 2.
 figure3.a <- readRDS("figure3a.RDS")
 
-#RDA data used for table 3
+#RDs data used for table 3
 deaths <- readRDS("deaths.RDS")
 left <- readRDS("left_df.RDS")
 utilities <- readRDS("resources_df.RDS")
@@ -83,7 +83,7 @@ tableS1 <- as.data.frame(cbind(
   c(hh, pop.est, median.age, prop.female, mean.hh),
   c(hh.se, pop.se, NA, fem.se, size.se)))
 
-#Customization for tanble S1 with z = 1.96 confidence interval.    
+#Customization for tanble S1 with z = 1.96, equivalent to a 95% confidence interval.    
 names(tableS1) <- c("Variable", "WeightedEst", "SE")
 tableS1$lower <- as.numeric(as.character(tableS1$WeightedEst)) - 1.96*as.numeric(as.character(tableS1$SE))
 tableS1$upper <- as.numeric(as.character(tableS1$WeightedEst)) + 1.96*as.numeric(as.character(tableS1$SE))
@@ -93,8 +93,8 @@ saveRDS(tableS1, "tableS1.RDS")
 
 # Table 2 ----------------------------------------------------------------------
 
-#En la tabla queremos el valor en funciÃ³n de data y key. 
-#AdemÃ¡s, queremos el promedio y desviaciÃ³n estÃ¡ndar de estos valores. 
+#En la tabla queremos el valor en función de data y key. 
+#Además, queremos el promedio y desviación estándar de estos valores. 
 tableS2 <- figure3.a %>% 
   aggregate(value~strata+key, data=., FUN=function(x) (paste (mean(x) %>% round(0), 
                                                               sd(x)%>% round(0) )))
@@ -134,7 +134,7 @@ table1_access <- households %>%
 
 #Table 3 ----------------------------------------------------------------------
 
-#In this table we are aggregating all variables and doing a lm t test. 
+#In this table we are aggregating all variables. 
 table_df <- aggregate(. ~ strata, data = table1_access, FUN =mean) %>% 
   t %>% as.data.frame() 
 #Next we are finding the standarized error. 
