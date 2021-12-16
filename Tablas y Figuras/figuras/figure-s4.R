@@ -1,6 +1,7 @@
 #Stephanie M. Ramos Camacho
 #Figure S4
 
+#codigo recopilado para usarse en la creacion de esta figura
 source("/Users/stephanie.marie/Documents/Semestre 1 2021-2022/CCOM 3031/Proyecto Final_Huracán María/base.R")
 
 #instalando los paquetes para las librearias
