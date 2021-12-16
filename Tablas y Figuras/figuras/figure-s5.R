@@ -43,5 +43,5 @@ figs5 <- ggplot(figs5Data, aes(x = value, y = as.factor(strata))) +
   theme(plot.title = element_text(hjust=0.5)) 
 
 #guarda y de ser necesario reescribe el pdf
-ggsave("figure-s5.pdf", figs5, "pdf", "/Users/stephanie.marie/Documents/Semestre 1 2021-2022/CCOM 3031/Proyecto Final_Huracán María/",
+ggsave("figure-s5.pdf", figs5, "pdf", "/../",
        units="in", width=4, height = 5, scale=2)
