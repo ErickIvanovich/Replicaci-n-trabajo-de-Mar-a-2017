@@ -1,12 +1,14 @@
 #Stephanie M. Ramos Camacho
 #Figure S5
 
+#sustitur con el path donde este guardado el file "base.R"
 source("/../base.R")
 
 lib_eval("ggridges")
 lib_eval("tidyverse")
 
 #archivo para los datos para el codigo
+#sustitur con el path donde este guardado el file "hh_main.RDS"
 mainHH <- readRDS("/../hh_main.RDS")
 
 #Impacto de lejania para agua y electricidad
@@ -43,5 +45,6 @@ figs5 <- ggplot(figs5Data, aes(x = value, y = as.factor(strata))) +
   theme(plot.title = element_text(hjust=0.5)) 
 
 #guarda y de ser necesario reescribe el pdf
+#sustitur con el path donde se quiera guardar el file pdf "figure-s5.pdf"
 ggsave("figure-s5.pdf", figs5, "pdf", "/../",
        units="in", width=4, height = 5, scale=2)
