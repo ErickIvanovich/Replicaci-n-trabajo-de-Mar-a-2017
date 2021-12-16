@@ -17,7 +17,7 @@ source("/Users/stephanie.marie/Documents/Semestre 1 2021-2022/CCOM 3031/Proyecto
 lib_eval("tidyverse")
 
 #archivo para los datos para el codigo
-mainHH <- read.RDS("/Users/stephanie.marie/Documents/Semestre 1 2021-2022/CCOM 3031/Proyecto Final_Huracán María/hh_main.RDS")
+mainHH <- readRDS("/Users/stephanie.marie/Documents/Semestre 1 2021-2022/CCOM 3031/Proyecto Final_Huracán María/hh_main.RDS")
 
 #proporcion faltante luego de enero 26(year despues de Maria)
 #crea la variable con la data del estudio de las casas
