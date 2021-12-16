@@ -3,12 +3,15 @@
 
 #analizar las muertes cercana a vecinos por strata
 
-source("/Users/stephanie.marie/Documents/Semestre 1 2021-2022/CCOM 3031/Proyecto Final_Huracán María/base.R")
+#sustituir con el path donde este guardado el file "base.R"
+source("/../base.R")
 
 #libreria a usarse
 lib_eval("tidyverse")
 
-households <- readRDS("/Users/stephanie.marie/Documents/Semestre 1 2021-2022/CCOM 3031/Proyecto Final_Huracán María/hh_main.RDS")
+#archivo para los datos para el codigo
+#sustituir con el path donde este guardado el file "hh_main.RDS"
+households <- readRDS("../hh_main.RDS")
 
 #limpiando la data para el analisis de los vecinos
 households$mort_neighbor_f <- ordered(households$mort_neighbor,
@@ -38,5 +41,6 @@ figs6 <- households %>%
   geom_label(aes(0,14.4,label = "Tasa Estimada de Mortalidad después de un Huracán", vjust = -1,hjust=.1))
 
 #guarda y de ser necesario reescribe el pdf
-ggsave("figure-s6.pdf", figs6, "pdf", "/Users/stephanie.marie/Documents/Semestre 1 2021-2022/CCOM 3031/Proyecto Final_Huracán María/",
+#sustituir con el path donde se quiera guardar el file pdf "figure-s6.pdf"
+ggsave("figure-s6.pdf", figs6, "pdf", "/../",
        units="in", width=3, height = 3, scale=2)
