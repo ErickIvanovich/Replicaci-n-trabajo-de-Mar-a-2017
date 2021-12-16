@@ -2,7 +2,8 @@
 #Figure S4
 
 #codigo recopilado para usarse en la creacion de esta figura
-source("/Users/stephanie.marie/Documents/Semestre 1 2021-2022/CCOM 3031/Proyecto Final_Huracán María/base.R")
+#sustitur con el path donde este guardado el file "base.R"
+source("/../base.R")
 
 #instalando los paquetes para las librearias
 #install.packages("tidyr")
@@ -17,7 +18,8 @@ source("/Users/stephanie.marie/Documents/Semestre 1 2021-2022/CCOM 3031/Proyecto
 lib_eval("tidyverse")
 
 #archivo para los datos para el codigo
-mainHH <- readRDS("/Users/stephanie.marie/Documents/Semestre 1 2021-2022/CCOM 3031/Proyecto Final_Huracán María/hh_main.RDS")
+#sustitur con el path donde este guardado el file "hh_main.RDS"
+mainHH <- readRDS("/../hh_main.RDS")
 
 #proporcion faltante luego de enero 26(year despues de Maria)
 #crea la variable con la data del estudio de las casas
@@ -37,6 +39,7 @@ figs4 <- mainHH %>%
   theme_classic()
 
 #guarda y de ser necesario reescribe el pdf
-ggsave("figure-s4.pdf", figs4, "pdf", "/Users/stephanie.marie/Documents/Semestre 1 2021-2022/CCOM 3031/Proyecto Final_Huracán María/",
+#sustitur con el path donde se quiera guardar el file de pdf "figure-s4.pdf"
+ggsave("figure-s4.pdf", figs4, "pdf", "/../",
        units="in", width=5, height = 3, scale=2)
 
