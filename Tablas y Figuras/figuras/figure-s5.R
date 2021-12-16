@@ -1,13 +1,13 @@
 #Stephanie M. Ramos Camacho
 #Figure S5
 
-source("/Users/stephanie.marie/Documents/Semestre 1 2021-2022/CCOM 3031/Proyecto Final_Huracán María/base.R")
+source("/../base.R")
 
 lib_eval("ggridges")
 lib_eval("tidyverse")
 
 #archivo para los datos para el codigo
-mainHH <- readRDS("/Users/stephanie.marie/Documents/Semestre 1 2021-2022/CCOM 3031/Proyecto Final_Huracán María/hh_main.RDS")
+mainHH <- readRDS("/../hh_main.RDS")
 
 #Impacto de lejania para agua y electricidad
 #Escoge la data a usarse para la figura s5 y lo guarda en esta variable
