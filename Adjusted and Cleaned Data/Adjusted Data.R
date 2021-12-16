@@ -1,6 +1,7 @@
 library(tidyverse)
 library(lubridate)
 
+#Loading data
 deaths <- readRDS("deaths.RDS")
 households <- readRDS("hh_main.RDS")
 individuals <- readRDS("ind_hh.RDS")
