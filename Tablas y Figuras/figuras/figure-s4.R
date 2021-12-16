@@ -2,7 +2,7 @@
 #Figure S4
 
 #codigo recopilado para usarse en la creacion de esta figura
-#sustitur con el path donde este guardado el file "base.R"
+#sustituir con el path donde este guardado el file "base.R"
 source("/../base.R")
 
 #instalando los paquetes para las librearias
@@ -18,7 +18,7 @@ source("/../base.R")
 lib_eval("tidyverse")
 
 #archivo para los datos para el codigo
-#sustitur con el path donde este guardado el file "hh_main.RDS"
+#sustituir con el path donde este guardado el file "hh_main.RDS"
 mainHH <- readRDS("/../hh_main.RDS")
 
 #proporcion faltante luego de enero 26(year despues de Maria)
@@ -39,7 +39,7 @@ figs4 <- mainHH %>%
   theme_classic()
 
 #guarda y de ser necesario reescribe el pdf
-#sustitur con el path donde se quiera guardar el file de pdf "figure-s4.pdf"
+#sustituir con el path donde se quiera guardar el file de pdf "figure-s4.pdf"
 ggsave("figure-s4.pdf", figs4, "pdf", "/../",
        units="in", width=5, height = 3, scale=2)
 
