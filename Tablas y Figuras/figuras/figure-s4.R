@@ -3,13 +3,13 @@
 
 #codigo recopilado para usarse en la creacion de esta figura
 #sustituir con el path donde este guardado el file "base.R"
-source("/../base.R")
+source("Adjusted and Cleaned Data/base.R")
 
 lib_eval("tidyverse")
 
 #archivo para los datos para el codigo
 #sustituir con el path donde este guardado el file "hh_main.RDS"
-mainHH <- readRDS("/../hh_main.RDS")
+mainHH <- readRDS("Adjusted and Cleaned Data/hh_main.RDS")
 
 #proporcion faltante luego de enero 26(year despues de Maria)
 #crea la variable con la data del estudio de las casas
@@ -27,6 +27,8 @@ figs4 <- mainHH %>%
                    labels = c("1: Menor \nRemoto", "2", "3", "4",
                               "5", "6", "7", "8: Mayor \nRemoto"))+
   theme_classic()
+
+figs4
 
 #guarda y de ser necesario reescribe el pdf
 #sustituir con el path donde se quiera guardar el file de pdf "figure-s4.pdf"
