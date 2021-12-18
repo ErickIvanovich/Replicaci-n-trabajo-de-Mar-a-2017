@@ -2,7 +2,7 @@
 #Figure 4
 
 #Debe sustituir con el path donde este guardado el file "base.R"
-source("../ref/base.R")
+source("Adjusted and Cleaned Data/base.R")
 
 lib_eval("ggplot2")
 lib_eval("ggsci")
@@ -33,12 +33,12 @@ oct.ul <- 3091
 sep.est <- 2987
 oct.est <- 3042
 
-# calculando los estrechos maximos y minimos para un 95% CI
+# Calculando los estrechos maximos y minimos para un 95% CI
 alexis <- sep.est + oct.est - sep.exp - oct.exp 
 alexis.ul <- sep.ul + oct.ul - sep.exp.ll - oct.exp.ll
 alexis.ll <- sep.ll + oct.ll - sep.exp.ul - oct.exp.ul
 
-excess_df <- data.frame(cbind(c("Unadjusted survey estimate", "Adjusted survey estimate", "Official death count", "Santos-Lozada and Howard (2018)", "New York Times"),
+excess_df <- data.frame(cbind(c("Estimado no ajustado de la encuesta", "Estimado ajustado de la encuesta", "Conteo de muerte oficial", "Santos-Lozada y Howard (2018)", "New York Times"),
                               c(4645,5740, 64, alexis, 1052), c(793, 1506, NA, alexis.ll, NA), c(8498,9889, NA, alexis.ul, NA)))
 names(excess_df) <- c("type", "estimate", "lower", "upper")
 excess_df$estimate <- as.numeric(as.character(excess_df$estimate))
@@ -53,7 +53,7 @@ excess_df$lower <- as.numeric(as.character(excess_df$lower))
 excess_df$upper <- as.numeric(as.character(excess_df$upper))
 excess_df$type <- factor(excess_df$type, levels = excess_df$type)
 
-#figura 4a
+# Figura 4a
 point.excess.df <- ggplot(data = excess_df, aes(x = type, y = estimate, color = type)) +
   geom_point(size = 3) +
   scale_color_manual(name = "", values = rev(pal_nejm()(7))) +
@@ -67,15 +67,16 @@ point.excess.df <- ggplot(data = excess_df, aes(x = type, y = estimate, color = 
     legend.justification = c(1, 1)) +
   theme(axis.title.x=element_blank(), axis.text.x=element_blank(),
         axis.ticks.x=element_blank()) +
-  scale_y_continuous("Excess death estimate", limits = c(0, NA), expand = c(0.01,0)) +
+  scale_y_continuous("Estimado de exceso de muertes", limits = c(0, NA), expand = c(0.01,0)) +
   facet_grid(~month, scales = "free_x", space = "free_x", switch = "x") +
   theme(strip.placement = "bottom") +
   theme(panel.spacing.x = unit(1, "cm"),
         strip.background = element_blank())
 
 #Debe sustituir con el path donde este guardado el file
-### figura 4b
-deaths <- readRDS("../data/rdata/deaths.RDS")
+
+### Figura 4b
+deaths <- readRDS("Adjusted and Cleaned Data/deaths.RDS")
 
 deaths_fig_df <- deaths %>%
   mutate(cod = case_when(
@@ -99,28 +100,28 @@ deaths_fig_df <- deaths %>%
 deaths_fig <- ggplot(data = deaths_fig_df, aes(x = date, y = age, group = factor(cod))) + 
   geom_point(aes(shape = factor(cod), color=factor(cod)), size=3) +
   scale_x_date(labels = date_format("%b"), date_breaks = "1 month") +
-  scale_shape_manual(name="Cause of Death",
+  scale_shape_manual(name="Causa de Muerte",
                      breaks=c(0,1,2, 3,4),
                      values=c(16,15,17,18,19),
-                     labels=c("\nUnrelated\n to Hurricane",
-                              "\nDirectly due\n to Hurricane",
-                              "\nIndirectly due\n to Hurricane",
-                              "\nSuicide",
-                              "\nOther")) +
-  scale_color_manual(name="Cause of Death",
+                     labels=c("\nNo relacionado\n al Huracán",
+                              "\nDirectamante\n causada por Huracán",
+                              "\nIndirectamante\n causada por Huracán",
+                              "\nSuicidio",
+                              "\nOtra")) +
+  scale_color_manual(name="Causa de Muerte",
                      breaks=c(0,1,2, 3,4),
-                     labels=c("\nUnrelated\n to Hurricane",
-                              "\nDirectly due\n to Hurricane",
-                              "\nIndirectly due\n to Hurricane",
-                              "\nSuicide",
-                              "\nOther"),
+                     labels=c("\nNo relacionado\n al Huracán",
+                              "\nDirectamante\n causada por Huracán",
+                              "\nIndirectamante\n causada por Huracán",
+                              "\nSuicidio",
+                              "\nOtra"),
                      values=c("#0072B5FF","#BC3C29FF","#E18727FF","#20854EFF","#6F99ADFF")) + 
-  xlab("Month") + ylab("Age (Years)") + #ggtitle("Figure 4: Household Members reported to have died in 2017 by Cause and Month") +
+  xlab("Mes") + ylab("Edad (Años)") + #ggtitle("Figure 4: Household Members reported to have died in 2017 by Cause and Month") +
   geom_vline(xintercept=as.Date("2017-09-20"), colour="indianred4", linetype=2) +
-  geom_text(aes(x=as.Date("2017-09-20"), label="Hurricane \nMaria", y=45), 
+  geom_text(aes(x=as.Date("2017-09-20"), label="Huracán \nMaría", y=45), 
             colour="indianred4", angle=90, size = 4) +
   geom_hline(yintercept = 79.50, colour = "grey58", linetype=2) + 
-  geom_text(aes(x= as.Date("2017-04-23"),y =79.95, label ="Average age of death in \nPuerto Rico (2016)"),
+  geom_text(aes(x= as.Date("2017-04-23"),y =79.95, label ="Promedio de muertes en \nPuerto Rico (2016)"),
             colour="grey58", size = 4)+
   theme_classic()+
   theme( 
@@ -135,5 +136,7 @@ deaths_fig <- ggplot(data = deaths_fig_df, aes(x = date, y = age, group = factor
 
 deaths_fig4 <- plot_grid(point.excess.df, deaths_fig, labels = c("A", "B"), nrow = 2)
 
-ggsave('../figures/figure4.pdf', deaths_fig4, 
-       scale = 1.25, width = 7, height = 7)
+deaths_fig4
+
+#ggsave('Adjusted and Cleaned Data/figure4.pdf', deaths_fig4, 
+#       scale = 1.25, width = 7, height = 7)
