@@ -1,6 +1,5 @@
 #Stephanie M. Ramos Camacho
 #Figure S6
-
 #analizar las muertes cercana a vecinos por strata
 
 #sustituir con el path donde este guardado el file "base.R"
