@@ -5,16 +5,6 @@
 #sustituir con el path donde este guardado el file "base.R"
 source("/../base.R")
 
-#instalando los paquetes para las librearias
-#install.packages("tidyr")
-#install.packages("magrittr") 
-#install.packages("dplyr")
-
-#libreria a usarse
-#library(tidyr)
-#library(ggplot2)
-#library(dplyr)
-#library(magrittr)
 lib_eval("tidyverse")
 
 #archivo para los datos para el codigo
