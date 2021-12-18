@@ -4,7 +4,6 @@
 
 #sustituir con el path donde este guardado el file "base.R"
 source("/../base.R")
-
 #libreria a usarse
 lib_eval("tidyverse")
 
