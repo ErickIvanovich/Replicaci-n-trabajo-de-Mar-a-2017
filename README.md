@@ -12,7 +12,7 @@ Este proyecto de Rafael Irrizary trata sobre el efecto de los desastres que dej�
 
 #### Cómo correr:
 
-El código de las figuras y tablas debe ser corrido en una plataforma que apoye Jupyter Notebooks (Google Colab, Anaconda, etc.). Adicionalmente, se requiere descargar y subir todos los archivos que se encuentran la carpeta de "Adjusted and Cleaned Data":
+El código de las figuras y tablas debe ser corrido en una plataforma que apoye Jupyter Notebooks (Google Colab, Anaconda, etc.). Adicionalmente, se requiere descargar y subir todos los archivos que se encuentran en la carpeta de "Adjusted and Cleaned Data":
 
 1. ACS2016.Rdata
 2. Adjusted Data.R
