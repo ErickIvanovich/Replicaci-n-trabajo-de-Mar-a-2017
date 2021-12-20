@@ -4,6 +4,7 @@
 #Debe sustituir con el path donde este guardado el file "base.R"
 source("Adjusted and Cleaned Data/base.R")
 
+#Librerias a usar
 lib_eval("ggplot2")
 lib_eval("ggsci")
 lib_eval("dplyr")
@@ -103,22 +104,22 @@ deaths_fig <- ggplot(data = deaths_fig_df, aes(x = date, y = age, group = factor
   scale_shape_manual(name="Causa de Muerte",
                      breaks=c(0,1,2, 3,4),
                      values=c(16,15,17,18,19),
-                     labels=c("\nNo relacionado\n al Huracán",
-                              "\nDirectamante\n causada por Huracán",
-                              "\nIndirectamante\n causada por Huracán",
+                     labels=c("\nNo relacionado\n al HuracÃ¡n",
+                              "\nDirectamante\n causada por HuracÃ¡n",
+                              "\nIndirectamante\n causada por HuracÃ¡n",
                               "\nSuicidio",
                               "\nOtra")) +
   scale_color_manual(name="Causa de Muerte",
                      breaks=c(0,1,2, 3,4),
-                     labels=c("\nNo relacionado\n al Huracán",
-                              "\nDirectamante\n causada por Huracán",
-                              "\nIndirectamante\n causada por Huracán",
+                     labels=c("\nNo relacionado\n al HuracÃ¡n",
+                              "\nDirectamante\n causada por HuracÃ¡n",
+                              "\nIndirectamante\n causada por HuracÃ¡n",
                               "\nSuicidio",
                               "\nOtra"),
                      values=c("#0072B5FF","#BC3C29FF","#E18727FF","#20854EFF","#6F99ADFF")) + 
-  xlab("Mes") + ylab("Edad (Años)") + #ggtitle("Figure 4: Household Members reported to have died in 2017 by Cause and Month") +
+  xlab("Mes") + ylab("Edad (AÃ±os)") + #ggtitle("Figure 4: Household Members reported to have died in 2017 by Cause and Month") +
   geom_vline(xintercept=as.Date("2017-09-20"), colour="indianred4", linetype=2) +
-  geom_text(aes(x=as.Date("2017-09-20"), label="Huracán \nMaría", y=45), 
+  geom_text(aes(x=as.Date("2017-09-20"), label="HuracÃ¡n \nMarÃ­a", y=45), 
             colour="indianred4", angle=90, size = 4) +
   geom_hline(yintercept = 79.50, colour = "grey58", linetype=2) + 
   geom_text(aes(x= as.Date("2017-04-23"),y =79.95, label ="Promedio de muertes en \nPuerto Rico (2016)"),
