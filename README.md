@@ -42,4 +42,4 @@ Files que se usaron para correr el código de las figuras S4, S5 y S6 y que se t
 
 1. Google Colab: https://colab.research.google.com/drive/1SJfBa5q8zkAiuIQziDYTarTn9b3-7mko?usp=sharing
 2. Google Doc: https://docs.google.com/document/d/15He3s44XqUiY8UoK2XoR5Jrcb0RAGaqK-fUy6pb5a4o/edit?usp=sharing
-3. Video: 
+3. Video: https://drive.google.com/file/d/1ehv2dWsUgsIWD5sevPj7-vNRf1EFcW8t/view?usp=sharing
