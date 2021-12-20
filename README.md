@@ -37,3 +37,9 @@ Luego de subir los archivos necesarios, podrá correr el código oprimiendo el b
 Files que se usaron para correr el código de las figuras S4, S5 y S6 y que se tiene que subir al colab antes de correrse:
 -base.R
 -hh_main.RDS
+
+#### Links:
+
+1. Google Colab: https://colab.research.google.com/drive/1SJfBa5q8zkAiuIQziDYTarTn9b3-7mko?usp=sharing
+2. Google Doc: https://docs.google.com/document/d/15He3s44XqUiY8UoK2XoR5Jrcb0RAGaqK-fUy6pb5a4o/edit?usp=sharing
+3. Video: 
