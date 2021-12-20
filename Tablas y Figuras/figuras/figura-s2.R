@@ -4,12 +4,14 @@
 #Debe sustituir con el path donde este guardado el file "base.R"
 source("../ref/base.R")
 
+#Librerias necesarias
 lib_eval("tidyverse")
 lib_eval("reshape2")
 
 #Debe sustituir con el path donde este guardado el file
 deaths_official <- readRDS("../data/rdata/deaths_official.RDS")
 
+#Tabla para desplegar las muertes oficiales
 deaths_official %>%
   dplyr::select(-Pop) %>%
   melt(id.vars = "Year") %>%
