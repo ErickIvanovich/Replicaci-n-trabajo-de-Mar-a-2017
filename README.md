@@ -32,6 +32,8 @@ El código de las figuras y tablas debe ser corrido en una plataforma que apoye 
 
 Asegúrese que los archivos se encuentren en la raíz del "working directory". En el caso de Google Colab, será dentro de la carpeta "content" que viene siendo el directorio default del proyecto. 
 
+Luego de subir los archivos necesarios, podrá correr el código oprimiendo el botón de "run" en cada celda del Google Colab. Para ver el código envuelto, basta con oprimir "Show Code". 
+
 Files que se usaron para correr el código de las figuras S4, S5 y S6 y que se tiene que subir al colab antes de correrse:
 -base.R
 -hh_main.RDS
