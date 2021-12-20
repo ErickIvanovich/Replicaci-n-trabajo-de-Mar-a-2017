@@ -16,19 +16,19 @@ El código de las figuras y tablas debe ser corrido en una plataforma que apoye 
 
 1. ACS2016.Rdata
 2. Adjusted Data.R
--adj_rates.RDS
--base.R
--cleaned_age_counts_acs_vs_survey.RDS
--cleaned_hh_size_acs_vs_survey.RDS
--deaths.RDS
--deaths_official.RDS
--hh_main.RDS
--ind_hh.RDS
--individuals.RDS
--left_df.RDS
--official_long.RDS
--pop_est.RDS
--where_df.RDS
+3. adj_rates.RDS
+4. base.R
+5. cleaned_age_counts_acs_vs_survey.RDS
+6. cleaned_hh_size_acs_vs_survey.RDS
+7. deaths.RDS
+8. deaths_official.RDS
+9. hh_main.RDS
+10. ind_hh.RDS
+11. individuals.RDS
+12. left_df.RDS
+13. official_long.RDS
+14. pop_est.RDS
+15. where_df.RDS
 
 Files que se usaron para correr el código de las figuras S4, S5 y S6 y que se tiene que subir al colab antes de correrse:
 -base.R
