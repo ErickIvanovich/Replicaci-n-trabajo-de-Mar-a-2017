@@ -4,12 +4,14 @@
 #Debe sustituir con el path donde este guardado el file "base.R"
 source("../ref/base.R")
 
+#Libreria necesaria
 lib_eval("tidyverse")
 
 #Debe sustituir con el path donde este guardado el file
 hh_main <- readRDS("../data/rdata/hh_main.RDS")
 individuals <- readRDS("../data/rdata/individuals.RDS")
 
+#Tabla para desplegar las familias tomadas en la muestra
 hh_main %>% 
 {table(.$hh_size)} %>%
   prop.table() %>% 
@@ -22,7 +24,7 @@ hh_main %>%
         legend.justification = c(1, 1)) +
   xlab("Household Size") + 
   ylab("Proportion of Sample") -> fig.s3a #+
-  #ggtitle("Figura S2: Histograma de las Proporciones de los  of Proportion of Household Sizes in Sample")
+  #ggtitle("Figura S2: Histograma de las Proporciones de las familas en la muestra")
 
 aggregate(age~hh_id, data=individuals, FUN=median) %>%
 {merge(hh_main, ., by="hh_id", all.x=T)} %>%
