@@ -10,7 +10,7 @@
 
 Este proyecto de Rafael Irrizary trata sobre el efecto de los desastres que dejó el huracán María. En septiembre de 2017, el huracán María causó daños masivos en la infraestructura de Puerto Rico, pero su efecto sobre la mortalidad sigue siendo controvertido. Y de esto es lo que se va aestar viendo en este proyecto.
 
-Cómo correr:
+#### Cómo correr:
 
 El código de las figuras y tablas debe ser corrido en una plataforma que apoye Jupyter Notebooks (Google Colab, Anaconda, etc.). Adicionalmente, se requiere descargar y subir todos los archivos que se encuentran la carpeta de "Adjusted and Cleaned Data":
 
